@@ -1,9 +1,9 @@
 export default {
   base: process.env.NODE_ENV === 'production' ? '/onek-ui/' : '/',
   themeConfig: {
-    siteTitle: "vitepress",
+    siteTitle: "onekui",
     nav: [
-      { text: "指南", link: "/guild/installation" },
+      { text: "指南", link: "/guild/quickstart" },
       { text: "组件", link: "/components/button/" },
     ],
     socialLinks: [
@@ -15,24 +15,11 @@ export default {
           text: "基础",
           items: [
             {
-              text: "安装",
-              link: "/guild/installation",
-            },
-            {
               text: "快速开始",
               link: "/guild/quickstart",
-            },
+            }
           ],
-        },
-        {
-          text: "进阶",
-          items: [
-            {
-              text: "xx",
-              link: "/xx",
-            },
-          ],
-        },
+        }
       ],
       "/components/": [
         {
@@ -40,7 +27,7 @@ export default {
           items: [
             {
               text: "Button",
-              link: "/components/button",
+              link: "/components/button/",
             },
           ],
         },
