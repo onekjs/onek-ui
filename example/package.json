@@ -10,10 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.3.9"
-  },
   "dependencies": {
     "@onek/components": "workspace:^1.0.0"
   }

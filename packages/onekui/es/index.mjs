@@ -1,12 +1,12 @@
 import * as t from "./src/index.mjs";
-import { Button as i } from "./src/button/index.mjs";
+import { default as r } from "./src/button/index.vue.mjs";
 const n = {
-  install: (e) => {
-    for (let o in t)
-      e.use(t[o]);
+  install: (o) => {
+    for (const e in t)
+      o.use(t[e]);
   }
 };
 export {
-  i as Button,
+  r as Button,
   n as default
 };
