@@ -2,9 +2,11 @@
   "name": "@onek/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
