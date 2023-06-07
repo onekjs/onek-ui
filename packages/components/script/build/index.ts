@@ -1,6 +1,6 @@
-import delPath from "../utils/delpath";
-import { series, parallel, src, dest } from "gulp";
-import { pkgPath, componentPath, runBuild } from "../utils";
+import delPath from '../utils/delpath';
+import { series, parallel, src, dest } from 'gulp';
+import { pkgPath, componentPath, runBuild } from '../utils';
 import less from 'gulp-less';
 import autoprefixer from 'gulp-autoprefixer';
 
@@ -28,5 +28,5 @@ export const buildStyle = () => {
 
 //打包组件
 export const buildComponent = async () => {
-  runBuild("pnpm run build", componentPath);
+  runBuild('pnpm run build', componentPath);
 };
