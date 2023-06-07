@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './app.vue';
-import onekui from '@onek/components';
+import onekui from 'onekui';
 
 const app = createApp(App);
 app.use(onekui);

@@ -6,12 +6,13 @@
   "scripts": {
     "dev:example": "cd ./example && vite",
     "dev:site": "cd ./site && pnpm run docs:dev",
+    "build:site": "cd ./site && pnpm run docs:build",
     "build:onekui": "gulp -f script/build/component.ts",
     "publish:onekui": "gulp -f script/publish/component.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./"
   },
   "keywords": [],
-  "author": "",
+  "author": "onek",
   "license": "MIT",
   "devDependencies": {
     "@types/gulp": "^4.0.11",
