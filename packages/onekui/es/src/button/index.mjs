@@ -1,8 +1,7 @@
-import t from "./index.vue.mjs";
-t.install = (a) => {
-  a.component(t.name, t);
-};
+import t from "../../utils/withinstall/index.mjs";
+import o from "./button.vue.mjs";
+const a = t(o);
 export {
-  t as Button,
-  t as default
+  a as Button,
+  a as default
 };

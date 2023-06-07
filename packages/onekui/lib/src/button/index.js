@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./index.vue.js");e.default.install=t=>{t.component(e.default.name,e.default)};exports.Button=e.default;exports.default=e.default;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("../../utils/withinstall/index.js"),u=require("./button.vue.js"),e=t.default(u.default);exports.Button=e;exports.default=e;

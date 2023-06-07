@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});require("./button/index.js");const e=require("./button/index.vue.js");exports.Button=e.default;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./button/index.js");exports.Button=t.Button;

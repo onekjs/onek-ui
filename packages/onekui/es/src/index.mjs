@@ -1,5 +1,4 @@
-import "./button/index.mjs";
-import { default as a } from "./button/index.vue.mjs";
+import { Button as r } from "./button/index.mjs";
 export {
-  a as Button
+  r as Button
 };

@@ -1,12 +1,13 @@
+
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 export default defineConfig({
   build: {
-    //打包后文件目录
-    outDir: 'es',
+    //压缩
+    //minify: false,
     rollupOptions: {
-      //忽略打包vue文件
+      //忽略不需要打包的文件
       external: ['vue', /\.less/],
       input: ['index.ts'],
       output: [
@@ -35,13 +36,14 @@ export default defineConfig({
       ]
     },
     lib: {
-      entry: './index.ts'
+      entry: './index.ts',
+      name: 'onekui'
     }
   },
   plugins: [
     vue(),
     dts({
-      entryRoot: './src',
+      entryRoot: 'src',
       outputDir: ['../onekui/es/src', '../onekui/lib/src'],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'

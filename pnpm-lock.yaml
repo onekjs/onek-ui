@@ -54,17 +54,17 @@ importers:
       vite-plugin-dts: 1.4.1_ssyx2ikjtbyjp43pch6u6i72ta
       vue: 3.2.36
 
-  example:
-    specifiers:
-      '@onek/components': workspace:^1.0.0
-    dependencies:
-      '@onek/components': link:../packages/components
-
   packages/components:
-    specifiers: {}
+    specifiers:
+      '@onek/utils': workspace:^1.0.0
+    dependencies:
+      '@onek/utils': link:../utils
 
   packages/onekui:
-    specifiers: {}
+    specifiers:
+      '@onek/utils': ^1.0.0
+    dependencies:
+      '@onek/utils': link:../utils
 
   packages/utils:
     specifiers: {}
