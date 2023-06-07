@@ -1,4 +1,4 @@
 packages:
-    - packages/*
-    - site
-    - example
+    - "packages/**"
+    - "play"
+    - "site"
