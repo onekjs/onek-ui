@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:example": "cd ./example && vite",
-    "dev:site": "esno script/dev/site.ts && cd ./site && pnpm run docs:dev",
+    "dev:site": "esno script/dev/site.ts",
     "build:site": "cd ./site && pnpm run docs:build",
     "build:onekui": "gulp -f script/build/component.ts",
     "publish:onekui": "gulp -f script/publish/component.ts",
