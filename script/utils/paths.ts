@@ -8,3 +8,9 @@ export const pkgPath = resolve(__dirname, '../../packages/');
 
 // example
 export const examplePath = resolve(__dirname, '../../example/');
+
+// site component
+export const siteComponentsPath = resolve(
+  __dirname,
+  '../../site/docs/components'
+);

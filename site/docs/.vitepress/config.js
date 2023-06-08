@@ -1,3 +1,5 @@
+import components from '../components/index.json'
+
 export default {
   base: process.env.NODE_ENV === 'production' ? '/onek-ui/' : '/',
   themeConfig: {
@@ -24,12 +26,7 @@ export default {
       "/components/": [
         {
           text: "基础组件",
-          items: [
-            {
-              text: "Button",
-              link: "/components/button/",
-            },
-          ],
+          items: components
         },
       ],
     },
