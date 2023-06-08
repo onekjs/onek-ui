@@ -1,4 +1,4 @@
-import delPath from '../utils/delpath';
+import { delPath } from '../utils';
 import { series, parallel, src, dest } from 'gulp';
 import { pkgPath, componentPath, runBuild } from '../utils';
 import less from 'gulp-less';
