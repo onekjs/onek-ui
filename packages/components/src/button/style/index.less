@@ -1,31 +1,96 @@
+@import '../../../style/index.less';
+
 .o-button {
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: none;
   cursor: pointer;
-  background: #fff;
-  border: 1px solid #dcdfe6;
-  color: #606266;
-  -webkit-appearance: none;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  transition: 0.1s;
-  font-weight: 500;
-  padding: 12px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-}
+  font-size: @font-size-1;
+  border: none;
+  border-radius: @border-radius-medium;
+  &--default {
+    color: @color-text-3;
+    background-color: @default;
+    &:hover {
+      background-color: @default-hover;
+    }
+    &:active {
+      background-color: @default-active;
+    }
 
-.o-button.o-button--primary {
-  color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
+    &--plain {
+      border: @border-1 solid;
+      border-color: @default;
+      background-color: @white;
+    }
+  }
 
-  &:hover {
-    background: #66b1ff;
-    border-color: #66b1ff;
+  &--primary {
     color: #fff;
+    background-color: @primary;
+    &:hover {
+      background-color: @primary-hover;
+    }
+    &:active {
+      background-color: @primary-active;
+    }
+
+    &--plain {
+      border: @border-1 solid;
+      border-color: @primary;
+      color: @primary;
+      background-color: @white;
+    }
+  }
+
+  &--warning {
+    color: #fff;
+    background-color: @warning;
+   
+    &:hover {
+      background-color: @warning-hover;
+    }
+    &:active {
+      background-color: @warning-active;
+    }
+    &--plain {
+      border: @border-1 solid;
+      border-color: @warning;
+      color: @warning;
+      background-color: @white;
+    }
+  }
+
+  &--danger {
+    color: #fff;
+    background-color: @danger;
+    &:hover {
+      background-color: @danger-hover;
+    }
+    &:active {
+      background-color: @danger-active;
+    }
+    &--plain {
+      border-color: @danger;
+      border: @border-1 solid;
+      color: @danger;
+      background-color: @white;
+    }
+  }
+
+  &--mini {
+    padding: 8px 8px;
+  }
+
+  &--small {
+    padding: 10px 20px;
+  }
+
+  &--normal {
+    padding: 12px 24px;
+  }
+
+  &--large {
+    padding: 14px 28px;
   }
 }

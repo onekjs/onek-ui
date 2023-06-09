@@ -33,7 +33,7 @@
   </div>
 </template>
 <script lang="ts" setup></script>
-<style>
+<style scoped>
 span {
   margin: 5px;
   font-size: 12px;

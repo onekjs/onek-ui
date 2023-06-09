@@ -8,6 +8,7 @@ const stayFile = ['package.json', 'README.md'];
 export type IComponent = {
   name: string;
   path: string;
+  demos?: Array<IComponent>;
 };
 
 export const delPath = async (path: string) => {
@@ -44,15 +45,36 @@ export const traverseDirectory = (
       traverseDirectory(filePath, components);
     } else {
       if (file === 'README.md') {
-        const componentName = path.basename(path.parse(filePath).dir);
-        components.push({
-          name: componentName,
-          path: path.relative(process.cwd(), filePath)
-        });
+        const dirName = path.basename(path.parse(filePath).dir);
+        const item: IComponent = {
+          name: dirName,
+          path: path.relative(process.cwd(), filePath),
+          demos: []
+        };
+        const demoDir = dir + '/__demo__';
+        item.demos = traverseCompnentsDemos(demoDir);
+        components.push(item);
       }
     }
   });
 };
+
+function traverseCompnentsDemos(destDirPath: string) {
+  const list: Array<IComponent> = [];
+  if (!fs.existsSync(destDirPath)) {
+    return list;
+  }
+  fs.readdirSync(destDirPath).forEach((file) => {
+    const filePath = path.join(destDirPath, file);
+    if (path.extname(filePath) === '.vue') {
+      list.push({
+        name: path.basename(file),
+        path: filePath
+      });
+    }
+  });
+  return list;
+}
 
 export const createComponentsJson = (
   list: Array<IComponent>,
@@ -79,18 +101,25 @@ export const copyFiles = (
   }
   sourcePathList.forEach((element) => {
     const destDirPath = `${destinationPath}/${element.name}`;
-    copyFile(element.path, destDirPath);
+    copyFile(element.path, destDirPath, 'index.md');
+    element.demos?.forEach((demo) => {
+      copyFile(demo.path, destDirPath, demo.name);
+    });
   });
 };
 
-export const copyFile = (sourcePath: string, destDirPath: string) => {
+export const copyFile = (
+  sourcePath: string,
+  destDirPath: string,
+  filename: string
+) => {
   // 检查目标目录是否存在，如果不存在则创建目录
   if (!fs.existsSync(destDirPath)) {
     fs.mkdirSync(destDirPath);
   }
   const sourceStream = fs.createReadStream(sourcePath);
   const destinationStream = fs.createWriteStream(
-    path.join(destDirPath, path.basename('index.md'))
+    path.join(destDirPath, path.basename(filename))
   );
   sourceStream.pipe(destinationStream);
 };
@@ -119,7 +148,11 @@ export const watchComponentReadme = (
           fs.watchFile(filePath, () => {
             const componentName = path.basename(path.parse(filePath).dir);
             if (filePath) {
-              copyFile(filePath, siteComponentsPath + '/' + componentName);
+              copyFile(
+                filePath,
+                siteComponentsPath + '/' + componentName,
+                'index.md'
+              );
             }
           });
         }

@@ -1,5 +1,5 @@
 <template>
-  <button class="o-button" :class="buttonStyle">
+  <button class="o-button" :class="buttonClasses">
     <slot></slot>
   </button>
 </template>
@@ -12,13 +12,26 @@ export default {
 <script lang="ts" setup>
 import { computed } from 'vue';
 import './style/index.less';
-type ButtonProps = {
+
+type Props = {
   type?: string;
+  size?: string;
+  plain?: boolean;
 };
 
-const buttonProps = defineProps<ButtonProps>();
+const prefix = 'o-button';
 
-const buttonStyle = computed(() => {
-  return { [`o-button--${buttonProps.type}`]: buttonProps.type };
+const buttonProps = withDefaults(defineProps<Props>(), {
+  type: 'default',
+  size: 'normal',
+  plain: false
+});
+
+const buttonClasses = computed(() => {
+  return {
+    [`${prefix}--${buttonProps.size}`]: buttonProps.size,
+    [`${prefix}--${buttonProps.type}`]: buttonProps.type,
+    [`${prefix}--${buttonProps.type}--plain`]: buttonProps.plain
+  };
 });
 </script>

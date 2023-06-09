@@ -1,4 +1,5 @@
 import components from '../components/index.json'
+import { applyPlugins } from '@ruabick/md-demo-plugins';
 
 export default {
   base: process.env.NODE_ENV === 'production' ? '/onek-ui/' : '/',
@@ -31,4 +32,9 @@ export default {
       ],
     },
   },
+  markdown: {
+    config(md) {
+      applyPlugins(md);
+    }
+  }
 };
