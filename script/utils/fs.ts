@@ -54,7 +54,7 @@ export const traverseDirectory = (
   });
 };
 
-export const createdComponentsJson = (
+export const createComponentsJson = (
   list: Array<IComponent>,
   destinationPath: string
 ) => {

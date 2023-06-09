@@ -10,5 +10,4 @@
 <o-button>默认按钮</o-button> 
 <o-button type="primary">默认按钮</o-button>
 ```
-
 :::

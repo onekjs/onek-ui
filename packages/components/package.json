@@ -9,8 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@onek/utils": "workspace:^1.0.0"
-  }
+  "license": "MIT"
 }

@@ -1,7 +1,7 @@
 import { createServer } from 'vitepress';
 import { createLogger } from 'vite';
 import chalk from 'chalk';
-import { createSite } from '../utils';
+import { createSite } from './create-site';
 
 const logger = createLogger('info', {
   prefix: 'seed'

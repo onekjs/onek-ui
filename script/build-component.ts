@@ -1,6 +1,6 @@
-import { delPath } from '../utils';
+import { delPath } from './utils';
 import { series, parallel, src, dest } from 'gulp';
-import { pkgPath, componentPath, runBuild } from '../utils';
+import { pkgPath, componentPath, runBuild } from './utils';
 import less from 'gulp-less';
 import autoprefixer from 'gulp-autoprefixer';
 
