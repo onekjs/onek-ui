@@ -21,7 +21,7 @@ type Props = {
 
 const prefix = 'o-button';
 
-const buttonProps = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   type: 'default',
   size: 'normal',
   plain: false
@@ -29,9 +29,9 @@ const buttonProps = withDefaults(defineProps<Props>(), {
 
 const buttonClasses = computed(() => {
   return {
-    [`${prefix}--${buttonProps.size}`]: buttonProps.size,
-    [`${prefix}--${buttonProps.type}`]: buttonProps.type,
-    [`${prefix}--${buttonProps.type}--plain`]: buttonProps.plain
+    [`${prefix}--${props.size}`]: props.size,
+    [`${prefix}--${props.type}`]: props.type,
+    [`${prefix}--${props.type}--plain`]: props.plain
   };
 });
 </script>

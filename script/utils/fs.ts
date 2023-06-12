@@ -53,6 +53,10 @@ export const traverseDirectory = (
         };
         const demoDir = dir + '/__demo__';
         item.demos = traverseCompnentsDemos(demoDir);
+        item.demos.push({
+          name: dirName + '.vue',
+          path: path.relative(process.cwd(), dir + '/index.vue')
+        });
         components.push(item);
       }
     }

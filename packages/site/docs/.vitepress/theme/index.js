@@ -1,5 +1,5 @@
 import DefaultTheme from "vitepress/theme";
-import onekui from "onekui";
+import onekui from "@onek/ui";
 import DemoBlock from '@ruabick/vitepress-demo-block';
 import '@ruabick/vitepress-demo-block/dist/style.css';
 

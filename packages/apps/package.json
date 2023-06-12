@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@onek/components": "workspace:^1.0.0",
-    "onekui": "workspace:^0.0.2"
+    "onekui": "^0.0.2"
   }
 }

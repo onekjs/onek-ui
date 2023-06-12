@@ -39,6 +39,9 @@ export default defineConfig({
       name: 'onekui'
     }
   },
+  test: {
+    environment: 'test'
+  },
   plugins: [
     vue(),
     dts({
