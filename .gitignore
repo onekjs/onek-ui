@@ -24,3 +24,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+site/docs/components
+site/docs/.vitepress/
+packages/onekui/
