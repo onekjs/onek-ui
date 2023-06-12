@@ -22,6 +22,4 @@ export const createSite = () => {
   createComponentsJson(components, siteComponentsPath);
 
   watchComponentReadme(componentPath, siteComponentsPath);
-
-  console.log('site 创建成功');
 };

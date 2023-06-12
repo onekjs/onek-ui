@@ -144,14 +144,31 @@ export const watchComponentReadme = (
 
         if (stats.isDirectory()) {
           watchComponentReadme(filePath, siteComponentsPath);
-        } else if (path.extname(filePath) === '.md') {
+        }
+        const parentDirectory = path.basename(path.parse(filePath).dir);
+        if (path.extname(filePath) === '.md') {
           fs.watchFile(filePath, () => {
-            const componentName = path.basename(path.parse(filePath).dir);
+            if (filePath) {
+              copyFile(
+                filePath,
+                siteComponentsPath + '/' + parentDirectory,
+                'index.md'
+              );
+            }
+          });
+        }
+        if (
+          path.extname(filePath) === '.vue' &&
+          parentDirectory === '__demo__'
+        ) {
+          const parts = filePath.split('\\');
+          const componentName = parts[parts.length - 3];
+          fs.watchFile(filePath, () => {
             if (filePath) {
               copyFile(
                 filePath,
                 siteComponentsPath + '/' + componentName,
-                'index.md'
+                path.basename(file)
               );
             }
           });
