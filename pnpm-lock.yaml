@@ -69,7 +69,10 @@ importers:
       onekui: 0.0.2
 
   packages/components:
-    specifiers: {}
+    specifiers:
+      '@onek/apps': workspace:^1.0.0
+    dependencies:
+      '@onek/apps': link:../apps
 
   packages/example:
     specifiers:
