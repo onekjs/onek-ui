@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:example": "cd ./example && vite",
+    "dev:example": "cd ./packages/example && vite",
     "dev:site": "esno script/dev-site.ts",
-    "build:site": "esno script/build-site.ts && cd ./site && pnpm run docs:build",
+    "build:site": "esno script/build-site.ts && cd ./packages/site && pnpm run docs:build",
     "build:onekui": "gulp -f script/build-component.ts",
     "publish:onekui": "gulp -f script/publish/component.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./"

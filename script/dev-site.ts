@@ -9,7 +9,7 @@ const logger = createLogger('info', {
 
 async function runDevSite() {
   await createSite();
-  const server = await createServer('./site/docs', {
+  const server = await createServer('./packages/site/docs', {
     host: true,
     port: 3080
   });

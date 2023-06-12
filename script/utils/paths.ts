@@ -12,5 +12,5 @@ export const examplePath = resolve(__dirname, '../../example/');
 // site component
 export const siteComponentsPath = resolve(
   __dirname,
-  '../../site/docs/components'
+  '../../packages/site/docs/components'
 );
