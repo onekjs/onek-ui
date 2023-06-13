@@ -19,6 +19,6 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "onekui": "^0.0.2"
+    "onekui": "workspace:^0.0.3"
   }
 }

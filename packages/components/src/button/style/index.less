@@ -2,6 +2,7 @@
 
 .o-button {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   box-shadow: none;
   cursor: pointer;
@@ -9,72 +10,48 @@
   border: none;
   border-radius: @border-radius-medium;
   &--default {
-    color: @color-text-3;
-    background-color: @default;
-    &:hover {
-      background-color: @default-hover;
-    }
-    &:active {
-      background-color: @default-active;
-    }
+    .o-button-status-mixin(@default, @default-hover, @default-active, @default-plain-hover, @default-plain-active, @default-disabled);
+    color: @color-text-3 !important;
 
-    &--plain {
-      border: @border-1 solid;
-      border-color: @default;
-      background-color: @white;
+    &--disabled:not(.o-button--default--plain, .o-button--default--link) {
+      cursor: not-allowed;
+      background-color: @default-disabled;
     }
   }
 
   &--primary {
-    color: #fff;
-    background-color: @primary;
-    &:hover {
-      background-color: @primary-hover;
+    .o-button-status-mixin(@primary, @primary-hover, @primary-active, @primary-plain-hover, @primary-plain-active, @primary-disabled);
+    
+    &--disabled:not(.o-button--primary--plain, .o-button--primary--link) {
+      cursor: not-allowed;
+      background-color: @primary-disabled;
     }
-    &:active {
-      background-color: @primary-active;
-    }
+  }
 
-    &--plain {
-      border: @border-1 solid;
-      border-color: @primary;
-      color: @primary;
-      background-color: @white;
+  &--success {
+    .o-button-status-mixin(@success, @success-hover, @success-active, @success-plain-hover, @success-plain-active, @success-disabled);
+    
+    &--disabled:not(.o-button--success--plain, .o-button--success--link) {
+      cursor: not-allowed;
+      background-color: @success-disabled;
     }
   }
 
   &--warning {
-    color: #fff;
-    background-color: @warning;
-   
-    &:hover {
-      background-color: @warning-hover;
-    }
-    &:active {
-      background-color: @warning-active;
-    }
-    &--plain {
-      border: @border-1 solid;
-      border-color: @warning;
-      color: @warning;
-      background-color: @white;
+    .o-button-status-mixin(@warning, @warning-hover, @warning-active, @warning-plain-hover, @warning-plain-active, @warning-disabled);
+    
+    &--disabled:not(.o-button--warning--plain, .o-button--warning--link) {
+      cursor: not-allowed;
+      background-color: @warning-disabled;
     }
   }
 
   &--danger {
-    color: #fff;
-    background-color: @danger;
-    &:hover {
-      background-color: @danger-hover;
-    }
-    &:active {
-      background-color: @danger-active;
-    }
-    &--plain {
-      border-color: @danger;
-      border: @border-1 solid;
-      color: @danger;
-      background-color: @white;
+    .o-button-status-mixin(@danger, @danger-hover, @danger-active, @danger-plain-hover, @danger-plain-active, @danger-disabled);
+    
+    &--disabled:not(.o-button--danger--plain, .o-button--danger--link) {
+      cursor: not-allowed;
+      background-color: @danger-disabled;
     }
   }
 
@@ -92,5 +69,44 @@
 
   &--large {
     padding: 14px 28px;
+  }
+
+
+  .o-button-status-mixin(@background-color, @hover, @active, @plain-hover, @plain-active, @disabled) {
+    color: #fff;
+    background-color: @background-color;
+    &:not(:disabled):hover {
+      background-color: @hover;
+    }
+    &:not(:disabled):active {
+      background-color: @active;
+    }
+    &--link {
+      color: @background-color;
+      border: none;
+      background-color: transparent;
+      &:not(:disabled):hover {
+        background-color: @default-hover;
+      }
+      &:not(:disabled):active {
+        background-color: @default-active;
+      }
+    }
+    &--plain {
+      border: @border-1 solid;
+      border-color: @background-color;
+      color: @background-color;
+      background-color: @white;
+      &:not(:disabled):hover {
+        background-color: @plain-hover;
+      }
+      &:not(:disabled):active {
+        background-color: @plain-active;
+      }
+    }
+    &--disabled {
+      cursor: not-allowed;
+      border-color: @disabled;
+    }
   }
 }

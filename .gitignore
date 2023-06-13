@@ -25,6 +25,5 @@ dist-ssr
 *.sln
 *.sw?
 
-site/docs/components
-site/docs/.vitepress/
-packages/onekui/
+packages/site/docs/components
+packages/site/docs/.vitepress/

@@ -3,7 +3,7 @@
 
 ## 基本用法
 按钮分为 default - 默认按钮、 primary - 主要按钮、warning - 警告、danger - 危险。
-按钮大小分四种类型 - 超小号按钮(mini) -小号按钮(small) -中号按钮（normal） -大号按钮(large)1
+按钮大小分四种类型 - 超小号按钮(mini) -小号按钮(small) -中号按钮（normal） -大号按钮(large)
 
 <demo src="./basic.vue"
 title="按钮类型"
@@ -12,3 +12,11 @@ importMap="{'vue-typical': 'http://localhost:3080/components/button/'}">
 </demo>
 
 <API src="./button.vue" lang="zh"></API>
+
+## 事件
+
+<demo src="./event.vue"
+title="按钮事件"
+desc="这是按钮事件"
+importMap="{'vue-typical': 'http://localhost:3080/components/button/'}">
+</demo>

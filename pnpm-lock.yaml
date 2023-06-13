@@ -92,11 +92,11 @@ importers:
       '@ruabick/md-demo-plugins': ^0.3.3
       '@ruabick/vite-plugin-gen-api-doc': ^0.3.3
       '@ruabick/vitepress-demo-block': ^0.3.3
-      onekui: ^0.0.2
+      onekui: workspace:^0.0.3
       vitepress: 1.0.0-alpha.29
       vue: ^3.2.36
     dependencies:
-      onekui: 0.0.2
+      onekui: link:../onekui
     devDependencies:
       '@ruabick/md-demo-plugins': 0.3.3
       '@ruabick/vite-plugin-gen-api-doc': 0.3.3_vue@3.3.4

@@ -9,8 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@onek/apps": "workspace:^1.0.0"
-  }
+  "license": "MIT"
 }
