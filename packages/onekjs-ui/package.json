@@ -1,0 +1,33 @@
+{
+  "name": "@onekjs/ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "private": false,
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "release": "release-it"
+  },
+  "keywords": [
+    "onekjs-ui",
+    "vue3组件库"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "author": "onek",
+  "license": "MIT",
+  "typings": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onekjs/onek-ui"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

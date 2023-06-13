@@ -31,7 +31,7 @@ export const delPath = async (path: string) => {
       }
     });
 
-    if (path != `${pkgPath}/onekui`) fs.rmdirSync(path);
+    if (path != `${pkgPath}/onekjs-ui`) fs.rmdirSync(path);
   }
 };
 

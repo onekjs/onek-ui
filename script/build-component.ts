@@ -4,9 +4,9 @@ import { pkgPath, componentPath, runBuild } from './utils';
 import less from 'gulp-less';
 import autoprefixer from 'gulp-autoprefixer';
 
-//删除onekui
+//删除onekjs-ui
 export const removeDist = () => {
-  return delPath(`${pkgPath}/onekui`);
+  return delPath(`${pkgPath}/onekjs-ui`);
 };
 
 export default series(
@@ -22,8 +22,8 @@ export const buildStyle = () => {
   return src(`${componentPath}/src/**/style/**.less`)
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(dest(`${pkgPath}/onekui/lib/src`))
-    .pipe(dest(`${pkgPath}/onekui/es/src`));
+    .pipe(dest(`${pkgPath}/onekjs-ui/lib/src`))
+    .pipe(dest(`${pkgPath}/onekjs-ui/es/src`));
 };
 
 //打包组件
