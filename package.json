@@ -10,7 +10,8 @@
     "build:ui": "gulp -f script/build-component.ts",
     "publish:ui": "gulp -f script/publish/component.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
-    "test:components": "cd ./packages/components && pnpm run test"
+    "test:components": "cd ./packages/components && pnpm run test",
+    "test:coverage": "cd ./packages/components && pnpm run coverage"
   },
   "keywords": [],
   "author": "onek",
@@ -45,6 +46,7 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
+    "@vitest/coverage-v8": "^0.32.0",
     "@vue/test-utils": "2.4.0-alpha.2"
   }
 }

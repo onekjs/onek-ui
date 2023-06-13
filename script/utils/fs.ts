@@ -55,7 +55,7 @@ export const traverseDirectory = (
         item.demos = traverseCompnentsDemos(demoDir);
         item.demos.push({
           name: dirName + '.vue',
-          path: path.relative(process.cwd(), dir + '/index.vue')
+          path: path.relative(process.cwd(), `${dir}/${dirName}.vue`)
         });
         components.push(item);
       }
