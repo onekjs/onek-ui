@@ -9,7 +9,7 @@
   font-size: @font-size-1;
   border: none;
   border-radius: @border-radius-medium;
-  &--default {
+  &-default {
     .o-button-status-mixin(@default, @default-hover, @default-active, @default-plain-hover, @default-plain-active, @default-disabled);
     color: @color-text-3 !important;
 
@@ -19,7 +19,7 @@
     }
   }
 
-  &--primary {
+  &-primary {
     .o-button-status-mixin(@primary, @primary-hover, @primary-active, @primary-plain-hover, @primary-plain-active, @primary-disabled);
     
     &--disabled:not(.o-button--primary--plain, .o-button--primary--link) {
@@ -28,7 +28,7 @@
     }
   }
 
-  &--success {
+  &-success {
     .o-button-status-mixin(@success, @success-hover, @success-active, @success-plain-hover, @success-plain-active, @success-disabled);
     
     &--disabled:not(.o-button--success--plain, .o-button--success--link) {
@@ -37,7 +37,7 @@
     }
   }
 
-  &--warning {
+  &-warning {
     .o-button-status-mixin(@warning, @warning-hover, @warning-active, @warning-plain-hover, @warning-plain-active, @warning-disabled);
     
     &--disabled:not(.o-button--warning--plain, .o-button--warning--link) {
@@ -46,7 +46,7 @@
     }
   }
 
-  &--danger {
+  &-danger {
     .o-button-status-mixin(@danger, @danger-hover, @danger-active, @danger-plain-hover, @danger-plain-active, @danger-disabled);
     
     &--disabled:not(.o-button--danger--plain, .o-button--danger--link) {
@@ -55,58 +55,77 @@
     }
   }
 
-  &--mini {
-    padding: 8px 8px;
+  &-mini {
+    padding: 0 8px;
+    height: 20px;
   }
 
-  &--small {
-    padding: 10px 20px;
+  &-small {
+    padding: 0 20px;
+    height: 26px;
   }
 
-  &--normal {
-    padding: 12px 24px;
+  &-normal {
+    padding: 0 24px;
+    height: 32px;
   }
 
-  &--large {
-    padding: 14px 28px;
+  &-large {
+    padding: 0 28px;
+    height: 38px;
   }
 
+  &-loading {
+    margin-right: 5px;
+    display: inline-block;
+    &--icon {
+      animation: onek-loading-circle 1s infinite cubic-bezier(0,0,1,1);
+      width: 18px;
+      height: 18px;
+      color: inherit;
+      font-style: normal;
+      vertical-align: -2px;
+      outline: none;
+      stroke: currentColor;
+    }
+  }
+}
 
-  .o-button-status-mixin(@background-color, @hover, @active, @plain-hover, @plain-active, @disabled) {
-    color: #fff;
-    background-color: @background-color;
+
+.o-button-status-mixin(@background-color, @hover, @active, @plain-hover, @plain-active, @disabled) {
+  color: #fff;
+  background-color: @background-color;
+  &:not(:disabled):hover {
+    background-color: @hover;
+  }
+  &:not(:disabled):active {
+    background-color: @active;
+  }
+  &--link {
+    color: @background-color;
+    border: none;
+    background-color: transparent;
     &:not(:disabled):hover {
-      background-color: @hover;
+      background-color: @default-hover;
     }
     &:not(:disabled):active {
-      background-color: @active;
+      background-color: @default-active;
     }
-    &--link {
-      color: @background-color;
-      border: none;
-      background-color: transparent;
-      &:not(:disabled):hover {
-        background-color: @default-hover;
-      }
-      &:not(:disabled):active {
-        background-color: @default-active;
-      }
+  }
+  &--plain {
+    border: @border-1 solid;
+    border-color: @background-color;
+    color: @background-color;
+    background-color: @white;
+    &:not(:disabled):hover {
+      background-color: @plain-hover;
     }
-    &--plain {
-      border: @border-1 solid;
-      border-color: @background-color;
-      color: @background-color;
-      background-color: @white;
-      &:not(:disabled):hover {
-        background-color: @plain-hover;
-      }
-      &:not(:disabled):active {
-        background-color: @plain-active;
-      }
+    &:not(:disabled):active {
+      background-color: @plain-active;
     }
-    &--disabled {
-      cursor: not-allowed;
-      border-color: @disabled;
-    }
+  }
+  &--disabled {
+    cursor: not-allowed;
+    border-color: @disabled;
   }
 }

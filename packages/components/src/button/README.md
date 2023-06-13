@@ -8,7 +8,14 @@
 <demo src="./basic.vue"
 title="按钮类型"
 desc="这是按钮类型、按钮大小演示"
-importMap="{'vue-typical': 'http://localhost:3080/components/button/'}">
+importMap="{'vue-typical': 'https://github.com/onekjs/onek-ui/tree/main/packages/components/src/button/__demo__/basic.vue'}">
 </demo>
 
-<API src="./button.vue" lang="zh"></API>
+## 加载中
+通过设置 loading 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发点击事件。
+
+<demo src="./loading.vue"
+title="loading"
+desc="这是按钮加载"
+importMap="{'vue-typical': 'https://github.com/onekjs/onek-ui/tree/main/packages/components/src/button/__demo__/loading.vue'}">
+</demo>
