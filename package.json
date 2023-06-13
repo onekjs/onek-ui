@@ -9,7 +9,8 @@
     "build:site": "esno script/build-site.ts && cd ./packages/site && pnpm run docs:build",
     "build:ui": "gulp -f script/build-component.ts",
     "publish:ui": "gulp -f script/publish/component.ts",
-    "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./"
+    "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+    "test:components": "cd ./packages/components && pnpm run test"
   },
   "keywords": [],
   "author": "onek",
@@ -42,5 +43,8 @@
     "vite-plugin-dts": "1.4.1",
     "vitest": "^0.32.0",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@vue/test-utils": "2.4.0-alpha.2"
   }
 }
