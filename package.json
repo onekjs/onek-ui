@@ -4,21 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:apps": "cd ./packages/onekjs-apps && vite",
+    "dev:example": "cd ./packages/onekjs-example && vite",
     "dev:site": "esno script/dev-site.ts",
     "build:site": "esno script/build-site.ts && cd ./packages/onekjs-site && pnpm run docs:build",
-    "build:ui": "gulp -f script/build-component.ts",
+    "build:ui": "gulp -f script/build-web.ts",
     "build:utils": "cd ./packages/onekjs-utils && vite build",
-    "publish:ui": "gulp -f script/publish/component.ts",
+    "publish:ui": "gulp -f script/publish/web.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
-    "test:components": "cd ./packages/components && pnpm run test",
-    "test:coverage": "cd ./packages/components && pnpm run coverage"
+    "test:web": "cd ./packages/web && pnpm run test",
+    "test:coverage": "cd ./packages/web && pnpm run coverage"
   },
   "keywords": [],
   "author": "onek",
   "license": "MIT",
   "devDependencies": {
-    "@onekjs/components": "workspace:*",
+    "@onekjs/web": "workspace:*",
     "@onekjs/ui": "workspace:*",
     "@onekjs/utils": "workspace:*",
     "@ruabick/md-demo-plugins": "^0.3.3",
