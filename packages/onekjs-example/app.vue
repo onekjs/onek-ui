@@ -77,6 +77,7 @@
 
   <icon-font name="sousuo" />
   <icon-font-gengduo size="60" />
+  <icon-font-sousuo size="30" />
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';

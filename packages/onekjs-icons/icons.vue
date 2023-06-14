@@ -28,8 +28,6 @@ const props = withDefaults(defineProps<Props>(), {
   rotate: 0
 });
 
-console.log(props.name);
-
 const isNumber = (val: number | string) => {
   return typeof val === 'number';
 };
