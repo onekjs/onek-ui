@@ -10,8 +10,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@onekjs/utils": "workspace:0.0.1"
-  }
+  "license": "MIT"
 }
