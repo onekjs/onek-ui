@@ -18,9 +18,10 @@
   "author": "onek",
   "license": "MIT",
   "devDependencies": {
-    "@onekjs/web": "workspace:*",
+    "@onekjs/icons": "workspace:*",
     "@onekjs/ui": "workspace:*",
     "@onekjs/utils": "workspace:*",
+    "@onekjs/web": "workspace:*",
     "@ruabick/md-demo-plugins": "^0.3.3",
     "@ruabick/vitepress-demo-block": "^0.3.3",
     "@types/gulp": "^4.0.11",
