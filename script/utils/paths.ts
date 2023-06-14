@@ -1,10 +1,7 @@
 import { resolve } from 'path';
 
 //组件库根目录
-export const componentPath = resolve(
-  __dirname,
-  '../../packages/onekjs-components'
-);
+export const webPath = resolve(__dirname, '../../packages/onekjs-web');
 
 //pkg根目录
 export const pkgPath = resolve(__dirname, '../../packages/');
@@ -13,7 +10,7 @@ export const pkgPath = resolve(__dirname, '../../packages/');
 export const examplePath = resolve(__dirname, '../../example/');
 
 // site component
-export const siteComponentsPath = resolve(
+export const webSitePath = resolve(
   __dirname,
   '../../packages/onekjs-site/docs/components'
 );
