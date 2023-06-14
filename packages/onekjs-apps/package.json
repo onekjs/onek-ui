@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@onekjs/components": "workspace:^1.0.0",
-    "@onekjs/ui": "workspace:^0.0.1"
+    "@onekjs/ui": "workspace:^0.0.2"
   }
 }

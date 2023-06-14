@@ -8,6 +8,7 @@
     "dev:site": "esno script/dev-site.ts",
     "build:site": "esno script/build-site.ts && cd ./packages/onekjs-site && pnpm run docs:build",
     "build:ui": "gulp -f script/build-component.ts",
+    "build:utils": "cd ./packages/onekjs-utils && vite build",
     "publish:ui": "gulp -f script/publish/component.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
     "test:components": "cd ./packages/components && pnpm run test",
