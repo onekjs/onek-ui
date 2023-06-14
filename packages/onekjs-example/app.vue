@@ -74,6 +74,9 @@
       >loading</o-button
     >
   </div>
+
+  <icon-font name="sousuo" />
+  <icon-font-gengduo size="60" />
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
