@@ -6,9 +6,10 @@
   "scripts": {
     "dev:example": "cd ./packages/onekjs-example && vite",
     "dev:site": "esno script/dev-site.ts",
-    "build:site": "esno script/build-site.ts && cd ./packages/onekjs-site && pnpm run docs:build",
+    "build:site": "esno script/build-site.ts",
     "build:ui": "gulp -f script/build-web.ts",
     "build:utils": "cd ./packages/onekjs-utils && vite build",
+    "build:icons": "esno script/build-icons.ts",
     "publish:ui": "gulp -f script/publish/web.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
     "test:web": "cd ./packages/web && pnpm run test",

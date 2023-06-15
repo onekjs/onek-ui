@@ -36,7 +36,7 @@ export default defineConfig({
     },
     lib: {
       entry: './index.ts',
-      name: 'kittyutils'
+      name: '@onekjs/utils'
     }
   },
 
