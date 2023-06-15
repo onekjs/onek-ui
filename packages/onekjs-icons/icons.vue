@@ -12,8 +12,7 @@ export default {
 
 <script lang="ts" setup>
 import { computed, CSSProperties } from 'vue';
-import './style/index.less';
-import './iconfont/iconfont.js';
+
 type Props = {
   type?: string;
   name?: string;
@@ -22,7 +21,7 @@ type Props = {
 };
 
 const props = withDefaults(defineProps<Props>(), {
-  name: 'gengduo',
+  name: 'loading',
   type: 'svg',
   size: 32,
   rotate: 0
@@ -48,7 +47,7 @@ const iconName = computed(() => {
   return `${hash}icon-${props.name}`;
 });
 </script>
-<style scoped lang="less">
+<style scoped>
 .onek-icon {
   display: inline-block;
   width: 1em;

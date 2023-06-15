@@ -75,9 +75,9 @@
     >
   </div>
 
-  <icon-font name="sousuo" />
-  <icon-font-gengduo size="60" />
-  <icon-font-sousuo size="30" />
+  <icon-font name="user" />
+  <icon-font-loading size="60" />
+  <icon-font-piechart size="30" />
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';

@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
+
 export default defineConfig({
   build: {
     //压缩
@@ -9,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       //忽略不需要打包的文件
       external: ['vue', /\.less/, '@onekjs/utils'],
-      input: ['index.ts'],
+      input: ['./index.ts'],
       output: [
         {
           //打包格式

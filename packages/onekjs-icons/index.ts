@@ -1,21 +1,16 @@
 import type { App } from 'vue';
 import { defineComponent } from 'vue';
 import _Icons from './icons.vue';
+import './iconfont/iconfont.js';
+import _icons from './icons.json';
 
-const list = ['sousuo', 'gengduo'];
-
-const newIcons = (name: string) => {
+const newComponentInstance = (instance: any, name: string) => {
   return defineComponent({
-    ..._Icons,
+    ...instance,
     props: {
+      ...instance.props,
       name: {
         default: name
-      },
-      type: {
-        default: 'svg'
-      },
-      size: {
-        default: 32
       }
     }
   });
@@ -23,9 +18,9 @@ const newIcons = (name: string) => {
 
 export const Icons = {
   install: (app: App) => {
-    list.forEach((name) => {
-      const icon = newIcons(name);
-      app.component(`${_Icons.name}-${name}`, icon);
+    _icons.forEach((item) => {
+      const icon = newComponentInstance(_Icons, item.name);
+      app.component(`${_Icons.name}-${item.name}`, icon);
     });
     app.component(_Icons.name, _Icons);
   }
