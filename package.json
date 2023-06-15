@@ -12,8 +12,8 @@
     "build:icons": "esno script/build-icons.ts",
     "publish:ui": "gulp -f script/publish/web.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
-    "test:web": "cd ./packages/web && pnpm run test",
-    "test:coverage": "cd ./packages/web && pnpm run coverage"
+    "test:web": "cd ./packages/onekjs-web && pnpm run test",
+    "test:coverage": "cd ./packages/onekjs-web && pnpm run coverage"
   },
   "keywords": [],
   "author": "onek",

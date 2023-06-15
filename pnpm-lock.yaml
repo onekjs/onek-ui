@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@onekjs/icons': workspace:*
       '@onekjs/ui': workspace:*
       '@onekjs/utils': workspace:*
       '@onekjs/web': workspace:*
@@ -40,6 +41,7 @@ importers:
       vitest: ^0.32.0
       vue: ^3.2.36
     devDependencies:
+      '@onekjs/icons': link:packages/onekjs-icons
       '@onekjs/ui': link:packages/onekjs-ui
       '@onekjs/utils': link:packages/onekjs-utils
       '@onekjs/web': link:packages/onekjs-web
@@ -76,7 +78,10 @@ importers:
       vitest: 0.32.0_5eqig2r7xkvdqzsyxjwhqvzyuy
       vue: 3.2.36
 
-  packages/onekjs-apps:
+  packages/onekjs-example:
+    specifiers: {}
+
+  packages/onekjs-icons:
     specifiers: {}
 
   packages/onekjs-site:

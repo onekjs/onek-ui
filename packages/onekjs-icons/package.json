@@ -2,8 +2,8 @@
   "name": "@onekjs/icons",
   "version": "0.0.1",
   "description": "",
-  "main": "es/onekjs-icons.mjs",
-  "module": "es/onekjs-icons.mjs",
+  "main": "index.ts",
+  "module": "index.ts",
   "keywords": [],
   "author": "",
   "license": "MIT"

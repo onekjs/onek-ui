@@ -2,7 +2,8 @@
   "name": "@onekjs/web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "module": "index.ts",
   "scripts": {
     "test": "vitest",
     "build": "vite build",
