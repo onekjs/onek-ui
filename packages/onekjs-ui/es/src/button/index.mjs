@@ -1,4 +1,4 @@
-import t from "../../utils/withinstall/index.mjs";
+import { withInstall as t } from "@onekjs/utils";
 import o from "./button.vue.mjs";
 const a = t(o);
 export {

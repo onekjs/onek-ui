@@ -1,0 +1,15 @@
+{
+  "name": "@onekjs/web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "module": "index.ts",
+  "scripts": {
+    "test": "vitest",
+    "build": "vite build",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

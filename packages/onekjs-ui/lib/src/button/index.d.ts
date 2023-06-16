@@ -1,4 +1,4 @@
-export declare const Button: import("../../utils/withinstall").SFCWithInstall<import("vue").DefineComponent<{
+export declare const Button: import("@onekjs/utils/dist/lib/withinstall").SFCWithInstall<import("vue").DefineComponent<{
     type: {
         type: StringConstructor;
         required: false;

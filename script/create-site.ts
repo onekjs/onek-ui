@@ -3,8 +3,8 @@ import {
   createComponentsJson,
   traverseDirectory,
   watchComponentReadme,
-  componentPath,
-  siteComponentsPath
+  webPath,
+  webSitePath
 } from './utils';
 
 type IComponent = {
@@ -15,11 +15,11 @@ type IComponent = {
 const components: Array<IComponent> = [];
 
 export const createSite = () => {
-  traverseDirectory(componentPath, components);
+  traverseDirectory(webPath, components);
 
-  copyFiles(components, siteComponentsPath);
+  copyFiles(components, webSitePath);
 
-  createComponentsJson(components, siteComponentsPath);
+  createComponentsJson(components, webSitePath);
 
-  watchComponentReadme(componentPath, siteComponentsPath);
+  watchComponentReadme(webPath, webSitePath);
 };

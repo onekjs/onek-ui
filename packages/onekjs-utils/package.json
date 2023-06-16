@@ -1,0 +1,16 @@
+{
+  "name": "@onekjs/utils",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "module": "index.ts",
+  "description": "",
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "vite build"
+  }
+}

@@ -4,19 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:apps": "cd ./packages/onekjs-apps && vite",
+    "dev:example": "cd ./packages/onekjs-example && vite",
     "dev:site": "esno script/dev-site.ts",
-    "build:site": "esno script/build-site.ts && cd ./packages/onekjs-site && pnpm run docs:build",
-    "build:ui": "gulp -f script/build-component.ts",
-    "publish:ui": "gulp -f script/publish/component.ts",
+    "build:site": "esno script/build-site.ts",
+    "build:ui": "gulp -f script/build-web.ts",
+    "build:utils": "cd ./packages/onekjs-utils && vite build",
+    "build:icons": "esno script/build-icons.ts",
+    "publish:ui": "gulp -f script/publish/web.ts",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
-    "test:components": "cd ./packages/components && pnpm run test",
-    "test:coverage": "cd ./packages/components && pnpm run coverage"
+    "test:web": "cd ./packages/onekjs-web && pnpm run test",
+    "test:coverage": "cd ./packages/onekjs-web && pnpm run coverage"
   },
   "keywords": [],
   "author": "onek",
   "license": "MIT",
   "devDependencies": {
+    "@onekjs/icons": "workspace:*",
+    "@onekjs/ui": "workspace:*",
+    "@onekjs/utils": "workspace:*",
+    "@onekjs/web": "workspace:*",
+    "@ruabick/md-demo-plugins": "^0.3.3",
+    "@ruabick/vitepress-demo-block": "^0.3.3",
     "@types/gulp": "^4.0.11",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-less": "^0.0.33",
@@ -44,6 +52,7 @@
     "typescript": "^5.1.3",
     "vite": "^4.3.9",
     "vite-plugin-dts": "1.4.1",
+    "vitepress": "1.0.0-beta.2",
     "vitest": "^0.32.0",
     "vue": "^3.2.36"
   }
