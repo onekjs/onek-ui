@@ -20,10 +20,10 @@
   "author": "onek",
   "license": "MIT",
   "devDependencies": {
+    "@onekjs/demo-block": "workspace:*",
     "@onekjs/icons": "workspace:*",
     "@onekjs/ui": "workspace:*",
     "@onekjs/utils": "workspace:*",
-    "@onekjs/demo-block": "workspace:*",
     "@onekjs/web": "workspace:*",
     "@ruabick/md-demo-plugins": "^0.3.3",
     "@ruabick/vitepress-demo-block": "^0.3.3",
