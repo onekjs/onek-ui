@@ -28,3 +28,4 @@ dist-ssr
 packages/onekjs-icons/es/
 packages/onekjs-site/docs/.vitepress/
 packages/onekjs-site/docs/components/
+pnpm-lock.yaml
