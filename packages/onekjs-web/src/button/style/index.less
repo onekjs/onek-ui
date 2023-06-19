@@ -10,7 +10,7 @@
   border: none;
   border-radius: @border-radius-medium;
   &-default {
-    .o-button-status-mixin(@default, @default-hover, @default-active, @default-plain-hover, @default-plain-active, @default-disabled);
+    .o-button-status-mixin(@default, @default-hover, @default-active, @default-plain, @default-plain-hover, @default-plain-active, @default-disabled);
     color: @default-text !important;
 
     &--disabled:not(.o-button--default--plain, .o-button--default--link) {
@@ -20,7 +20,7 @@
   }
 
   &-primary {
-    .o-button-status-mixin(@primary, @primary-hover, @primary-active, @primary-plain-hover, @primary-plain-active, @primary-disabled);
+    .o-button-status-mixin(@primary, @primary-hover, @primary-active,  @primary-plain, @primary-plain-hover, @primary-plain-active, @primary-disabled);
     
     &--disabled:not(.o-button--primary--plain, .o-button--primary--link) {
       cursor: not-allowed;
@@ -29,7 +29,7 @@
   }
 
   &-success {
-    .o-button-status-mixin(@success, @success-hover, @success-active, @success-plain-hover, @success-plain-active, @success-disabled);
+    .o-button-status-mixin(@success, @success-hover, @success-active, @success-plain, @success-plain-hover, @success-plain-active, @success-disabled);
     
     &--disabled:not(.o-button--success--plain, .o-button--success--link) {
       cursor: not-allowed;
@@ -38,7 +38,7 @@
   }
 
   &-warning {
-    .o-button-status-mixin(@warning, @warning-hover, @warning-active, @warning-plain-hover, @warning-plain-active, @warning-disabled);
+    .o-button-status-mixin(@warning, @warning-hover, @warning-active, @warning-plain, @warning-plain-hover, @warning-plain-active, @warning-disabled);
     
     &--disabled:not(.o-button--warning--plain, .o-button--warning--link) {
       cursor: not-allowed;
@@ -47,7 +47,7 @@
   }
 
   &-danger {
-    .o-button-status-mixin(@danger, @danger-hover, @danger-active, @danger-plain-hover, @danger-plain-active, @danger-disabled);
+    .o-button-status-mixin(@danger, @danger-hover, @danger-active, @danger-plain, @danger-plain-hover, @danger-plain-active, @danger-disabled);
     
     &--disabled:not(.o-button--danger--plain, .o-button--danger--link) {
       cursor: not-allowed;
@@ -58,30 +58,71 @@
   &-mini {
     padding: 0 8px;
     height: 20px;
+    &-round {
+      border-radius: 12px;
+      text-align: center;
+    }
+    &-circle {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+    }
   }
 
   &-small {
-    padding: 0 20px;
+    padding: 0 12px;
     height: 26px;
+    &-round {
+      border-radius: 14px;
+      text-align: center;
+    }
+    &-circle {
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      padding: 0px;
+    }
   }
 
   &-normal {
-    padding: 0 24px;
     height: 32px;
+    padding: 0 16px;
+    &-round {
+      padding: 0 16px;
+      border-radius: 16px;
+      text-align: center;
+    }
+    &-circle {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      padding: 0px;
+    }
   }
 
   &-large {
-    padding: 0 28px;
+    padding: 0 20px;
     height: 38px;
+    font-size: 16px;
+    &-round {
+      border-radius: 20px;
+      text-align: center;
+    }
+    &-circle {
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      padding: 0px;
+    }
   }
 
   &-loading {
-    margin-right: 5px;
-    display: inline-block;
+    display: flex;
+    margin-right: 8px;
+    align-items: center;
     &--icon {
       animation: onek-loading-circle 1s infinite cubic-bezier(0,0,1,1);
-      width: 18px;
-      height: 18px;
       color: inherit;
       font-style: normal;
       vertical-align: -2px;
@@ -89,10 +130,14 @@
       stroke: currentColor;
     }
   }
+
+  &-icon {
+    margin-right: 8px;
+  }
 }
 
 
-.o-button-status-mixin(@background-color, @hover, @active, @plain-hover, @plain-active, @disabled) {
+.o-button-status-mixin(@background-color, @hover, @active, @plain, @plain-hover, @plain-active, @disabled) {
   color: #fff;
   background-color: @background-color;
   &:not(:disabled):hover {
@@ -114,14 +159,16 @@
   }
   &--plain {
     border: @border-1 solid;
-    border-color: @background-color;
+    border-color: @plain;
     color: @background-color;
     background-color: @white;
     &:not(:disabled):hover {
-      background-color: @plain-hover;
+      background-color: transparent;
+      border-color: @plain-hover;
     }
     &:not(:disabled):active {
-      background-color: @plain-active;
+      background-color: transparent;
+      border-color: @plain-active;
     }
   }
   &--disabled {

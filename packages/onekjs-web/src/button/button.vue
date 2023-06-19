@@ -6,23 +6,12 @@
     :class="buttonClasses"
   >
     <span v-if="isloading" class="o-button-loading">
-      <svg
-        t="1686634731795"
-        class="o-button-loading--icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="2396"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <path
-          d="M512 170.666667v85.333333a256 256 0 1 1-223.573333 131.2L213.930667 345.6A341.333333 341.333333 0 1 0 512 170.666667z"
-          fill="#fff"
-          opacity=".3"
-          p-id="2397"
-        ></path>
-      </svg>
+      <icon class="o-button-loading--icon" name="loading" />
     </span>
+    <span v-else-if="$slots.default && $slots.icon">
+      <span class="o-button-icon"><slot name="icon"></slot> </span>
+    </span>
+    <slot v-else name="icon"></slot>
 
     <slot></slot>
   </button>
@@ -35,7 +24,9 @@ export default {
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue';
+import icon from '../icon/icon.vue';
 import './style/index.less';
+
 const buttonGroupInjectionKey = 'OnekUIButtonGroup';
 
 const emits = defineEmits(['click']);
@@ -47,6 +38,7 @@ type Props = {
   link?: boolean;
   disabled?: boolean;
   loading?: boolean;
+  shape?: string;
 };
 
 const prefix = 'o-button';
@@ -57,7 +49,8 @@ const props = withDefaults(defineProps<Props>(), {
   plain: false,
   disabled: false,
   link: false,
-  loading: false
+  loading: false,
+  shape: 'square'
 });
 
 const groupProps = inject(buttonGroupInjectionKey, undefined);
@@ -72,6 +65,7 @@ const buttonClasses = computed(() => {
     [`${prefix}-${groupProps?.size ?? props.size}`]: true,
     [`${prefix}-${groupProps?.type ?? props.type}--link`]:
       groupProps?.link || props.link,
+    [`${prefix}-${groupProps?.size ?? props.size}-${props.shape}`]: true,
     [`${prefix}-${props.type}--plain`]: props.plain,
     [`${prefix}-${props.type}--disabled`]: props.disabled || props.loading
   };

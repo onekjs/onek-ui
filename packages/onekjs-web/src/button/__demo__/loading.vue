@@ -1,12 +1,12 @@
 <template>
   <div style="display: flex">
     <span>加载状态</span>
-    <o-button loading size="small" type="primary">loading</o-button>
+    <o-button loading size="normal" type="primary">loading</o-button>
     <span />
     <o-button
       @click="handleClick"
       :loading="loading"
-      size="small"
+      size="normal"
       type="primary"
       >loading</o-button
     >

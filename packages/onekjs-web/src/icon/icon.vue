@@ -17,14 +17,14 @@ import './style/index.less';
 type Props = {
   type?: string;
   name?: string;
-  size?: number;
+  size?: number | string;
   rotate?: number;
 };
 
 const props = withDefaults(defineProps<Props>(), {
   name: 'loading',
   type: 'svg',
-  size: 12,
+  size: 0,
   rotate: 0
 });
 

@@ -82,4 +82,6 @@ describe('Button.vue', () => {
 
     expect(wrapper.find('button').element.disabled).toBe(true);
   });
+
+  // 检查按钮组成功
 });
