@@ -34,8 +34,9 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 import './style/index.less';
+const buttonGroupInjectionKey = 'OnekUIButtonGroup';
 
 const emits = defineEmits(['click']);
 
@@ -59,15 +60,18 @@ const props = withDefaults(defineProps<Props>(), {
   loading: false
 });
 
+const groupProps = inject(buttonGroupInjectionKey, undefined);
+
 const isloading = computed(() => {
   return props.loading;
 });
 
 const buttonClasses = computed(() => {
   return {
-    [`${prefix}-${props.size}`]: props.size,
-    [`${prefix}-${props.type}`]: props.type,
-    [`${prefix}-${props.type}--link`]: props.link,
+    [`${prefix}-${groupProps?.type ?? props.type}`]: true,
+    [`${prefix}-${groupProps?.size ?? props.size}`]: true,
+    [`${prefix}-${groupProps?.type ?? props.type}--link`]:
+      groupProps?.link || props.link,
     [`${prefix}-${props.type}--plain`]: props.plain,
     [`${prefix}-${props.type}--disabled`]: props.disabled || props.loading
   };

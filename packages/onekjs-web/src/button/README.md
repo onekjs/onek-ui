@@ -19,3 +19,10 @@ title="loading"
 desc="这是按钮加载"
 importMap="{'vue-typical': 'https://github.com/onekjs/onek-ui/tree/main/packages/components/src/button/__demo__/loading.vue'}">
 </demo>
+
+## 按钮组
+<demo src="./group.vue"
+title="group"
+desc="这是按钮组"
+importMap="{'vue-typical': 'https://github.com/onekjs/onek-ui/tree/main/packages/components/src/button/__demo__/group.vue'}">
+</demo>

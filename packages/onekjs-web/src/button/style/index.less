@@ -11,7 +11,7 @@
   border-radius: @border-radius-medium;
   &-default {
     .o-button-status-mixin(@default, @default-hover, @default-active, @default-plain-hover, @default-plain-active, @default-disabled);
-    color: @color-text-3 !important;
+    color: @default-text !important;
 
     &--disabled:not(.o-button--default--plain, .o-button--default--link) {
       cursor: not-allowed;
@@ -127,5 +127,39 @@
   &--disabled {
     cursor: not-allowed;
     border-color: @disabled;
+  }
+}
+
+.o-button-group {
+  display: inline-flex;
+  
+  &-horizontal {
+    &>:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &>:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &>:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &-vertical {
+    flex-direction: column;
+
+    &>:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &>:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &>:last-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 }
