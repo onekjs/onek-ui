@@ -21,7 +21,6 @@
   "license": "MIT",
   "devDependencies": {
     "@onekjs/demo-block": "workspace:*",
-    "@onekjs/icons": "workspace:*",
     "@onekjs/ui": "workspace:*",
     "@onekjs/utils": "workspace:*",
     "@onekjs/web": "workspace:*",
