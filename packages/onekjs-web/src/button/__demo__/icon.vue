@@ -8,14 +8,14 @@
     <span />
     <o-button shape="circle" size="normal" type="warning">
       <template #icon>
-        <o-icon name="download" />
+        <o-icon-download name="download" />
       </template>
     </o-button>
     <span />
     <o-button shape="circle" size="normal" type="danger">
       <template #icon>
         <!-- <o-icon name="close" /> -->
-        <OIconClose />
+        <IconUp />
       </template>
     </o-button>
     <span />
@@ -67,7 +67,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 const loading = ref(false);
-import { OIconClose } from '@onekjs/icons';
+import { IconUp } from '@onekjs/icons';
 const handleClick = () => {
   loading.value = !loading.value;
   setTimeout(() => {
