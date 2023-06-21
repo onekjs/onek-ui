@@ -14,7 +14,8 @@
     <span />
     <o-button shape="circle" size="normal" type="danger">
       <template #icon>
-        <o-icon name="close" />
+        <!-- <o-icon name="close" /> -->
+        <OIconClose />
       </template>
     </o-button>
     <span />
@@ -66,6 +67,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 const loading = ref(false);
+import { OIconClose } from '@onekjs/icons';
 const handleClick = () => {
   loading.value = !loading.value;
   setTimeout(() => {

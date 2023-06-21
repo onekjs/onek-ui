@@ -5,6 +5,8 @@ import { iconsPath, runBuild } from './utils';
 
 const iconsSpritesName = 'icons-sprites';
 
+const iconsComponentPath = `${iconsPath}/src/components`;
+
 interface Icon {
   name: string;
   componentName: string;
@@ -29,45 +31,12 @@ function getSVGData(): Icon[] {
   return data;
 }
 
-function compilerIconSprites(data: Icon[]) {
-  let symbol_str = '';
-  if (!fs.existsSync(`${iconsPath}/src`)) {
-    fs.mkdirSync(`${iconsPath}/src`);
+function generateComponent(data: Icon[]) {
+  if (!fs.existsSync(iconsComponentPath)) {
+    fs.mkdirSync(iconsComponentPath);
   }
-  for (let i = 0; i < data.length; i++) {
-    const svgFile = fs.readFileSync(data[i].path, 'utf8');
-    const pathRegex = /<path[^>]*>/;
-    let svgPath = svgFile.match(pathRegex)![0];
-    svgPath = svgPath.replace(/fill="#[a-zA-Z0-9]+"/g, '');
-    const symbol = `<symbol id="${data[i].name}"  viewBox="0 0 1024 1024">${svgPath}</symbol>`;
-    symbol_str += symbol;
-  }
-  const outputData = `const iconSprites =
-  '<svg xmlns="http://www.w3.org/2000/svg" style="display:none">${symbol_str}</svg>';
-export { iconSprites }
-`;
-  const spritesName = `${iconsPath}/src/${iconsSpritesName}.js`;
-  fs.writeFileSync(spritesName, outputData);
-
-  const loadStr = `import { iconSprites } from './${iconsSpritesName}';
-
-export const loadSprites = () => {
-  const svg = document.createElement('div');
-  svg.setAttribute('aria-hidden', 'true');
-  svg.style = 'display: none';
-  svg.innerHTML += iconSprites;
-  const ref = document.body.firstChild;
-  document.body.insertBefore(svg, ref);
-};
-`;
-  const loadName = `${iconsPath}/src/load.js`;
-  fs.writeFileSync(loadName, loadStr);
-}
-
-function createComponent(data: Icon[]) {
-  if (!fs.existsSync(`${iconsPath}/src/components`)) {
-    fs.mkdirSync(`${iconsPath}/src/components`);
-  }
+  let exports = ``;
+  const icons_list = [];
   for (let i = 0; i < data.length; i++) {
     const svgFile = fs.readFileSync(data[i].path, 'utf8');
     const pathRegex = /<path[^>]*>/;
@@ -122,45 +91,59 @@ const iconName = computed(() => {
 });
 </script>
 `;
-    const iconName = `${iconsPath}/src/components/${data[i].name}.vue`;
+    const iconName = `${iconsComponentPath}/${data[i].name}.vue`;
     fs.writeFileSync(iconName, iconTemplate);
-    data[
-      i
-    ].import = `import ${data[i].componentName} from './src/components/${data[i].name}.vue'`;
-  }
-}
 
-function createMain(icons: Icon[]) {
-  let imports = `export { default as icon_list } from './icon-list-json.json';\n`;
-  let components = ``;
-  const icons_list = [];
-  for (let i = 0; i < icons.length; i++) {
-    imports += icons[i]!.import! + ';\n';
-    components += `app.component(${icons[i].componentName}.name, ${icons[i].componentName});\n`;
+    const iconIndexName = `${iconsComponentPath}/${data[i].name}.js`;
+    const words = data[i].componentName.split('_');
+    const capitalizedWords = words.map(
+      (word) => word.charAt(0).toUpperCase() + word.slice(1)
+    );
+    const exportName = capitalizedWords.join('');
+    const iconIndex = `import ${exportName} from './${data[i].name}.vue';
+${exportName}.install = (app, options) => {
+  app.component(${exportName}.name, ${exportName});
+};
+export default ${exportName};
+`;
+    fs.writeFileSync(iconIndexName, iconIndex);
+
+    exports += `export { default as ${exportName} } from './components/${data[i].name}.js';\n`;
+
     icons_list.push({
-      name: `o-${icons[i].name}`
+      name: `o-${data[i].name}`
     });
   }
-  const iconTemplate = `${imports}
-const Ions = {
-  install: (app, options) => {
-    ${components}
-  }
-};
 
-export default Ions;
-`;
   const iconJSON = `${iconsPath}/icon-list-json.json`;
   fs.writeFileSync(iconJSON, JSON.stringify(icons_list));
+
+  const iconsName = `${iconsPath}/src/index.js`;
+  fs.writeFileSync(iconsName, exports);
+}
+
+function generateIndex() {
+  const index = `export { default as icon_list } from './icon-list-json.json';
+import * as components from './src/index';
+export * from './src/index';
+
+export default {
+  install: (app) => {
+    for (const name in components) {
+      app.use(components[name]);
+    }
+  }
+};
+`;
   const iconName = `${iconsPath}/index.js`;
-  fs.writeFileSync(iconName, iconTemplate);
+  fs.writeFileSync(iconName, index);
 }
 
 async function buildIcons() {
   const icons = getSVGData();
-  compilerIconSprites(icons);
-  createComponent(icons);
-  createMain(icons);
+  // compilerIconSprites(icons);
+  generateComponent(icons);
+  generateIndex();
   runBuild('pnpm run build', iconsPath);
 }
 buildIcons();
