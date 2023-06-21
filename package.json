@@ -6,6 +6,7 @@
   "scripts": {
     "dev:example": "cd ./packages/onekjs-example && vite",
     "dev:site": "esno script/dev-site.ts",
+    "build:example": "cd ./packages/onekjs-example && vite build",
     "build:site": "esno script/build-site.ts",
     "build:ui": "gulp -f script/build-web.ts",
     "build:utils": "cd ./packages/onekjs-utils && vite build",
@@ -24,6 +25,7 @@
     "@onekjs/ui": "workspace:*",
     "@onekjs/utils": "workspace:*",
     "@onekjs/web": "workspace:*",
+    "@onekjs/icons": "workspace:*",
     "@ruabick/md-demo-plugins": "^0.3.3",
     "@ruabick/vitepress-demo-block": "^0.3.3",
     "@types/gulp": "^4.0.11",

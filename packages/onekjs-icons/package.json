@@ -1,0 +1,19 @@
+{
+  "name": "@onekjs/icons",
+  "version": "0.0.1",
+  "description": "icons",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "icons",
+    "svg"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

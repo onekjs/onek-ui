@@ -14,3 +14,6 @@ export const webSitePath = resolve(
   __dirname,
   '../../packages/onekjs-site/docs/components'
 );
+
+// icons
+export const iconsPath = resolve(__dirname, '../../packages/onekjs-icons');
