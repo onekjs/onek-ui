@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "icons",
   "type": "module",
-  "main": "./index.js",
-  "module": "./index.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "build": "vite build"
   },

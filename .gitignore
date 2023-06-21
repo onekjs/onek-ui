@@ -29,3 +29,11 @@ packages/onekjs-icons/es/
 packages/onekjs-site/docs/.vitepress/
 packages/onekjs-site/docs/components/
 pnpm-lock.yaml
+packages/onekjs-icons/src/components/
+packages/onekjs-icons/index.js
+packages/onekjs-icons/load.js
+packages/onekjs-icons/icon-list-json.json
+packages/onekjs-icons/src/icons-sprites.js
+packages/onekjs-icons/src/load.js
+packages/onekjs-demo-block/es/
+packages/onekjs-site/docs/.vitepress/cache/

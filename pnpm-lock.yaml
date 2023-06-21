@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@onekjs/demo-block': workspace:*
       '@onekjs/icons': workspace:*
       '@onekjs/ui': workspace:*
       '@onekjs/utils': workspace:*
@@ -40,7 +41,9 @@ importers:
       vitepress: 1.0.0-beta.2
       vitest: ^0.32.0
       vue: ^3.2.36
+      vue-router: ^4.2.2
     devDependencies:
+      '@onekjs/demo-block': link:packages/onekjs-demo-block
       '@onekjs/icons': link:packages/onekjs-icons
       '@onekjs/ui': link:packages/onekjs-ui
       '@onekjs/utils': link:packages/onekjs-utils
@@ -77,6 +80,10 @@ importers:
       vitepress: 1.0.0-beta.2_q2rgakkvbdioiakw3n2qnd67ba
       vitest: 0.32.0_5eqig2r7xkvdqzsyxjwhqvzyuy
       vue: 3.2.36
+      vue-router: 4.2.2_vue@3.2.36
+
+  packages/onekjs-demo-block:
+    specifiers: {}
 
   packages/onekjs-example:
     specifiers: {}
@@ -7805,6 +7812,15 @@ packages:
       semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-router/4.2.2_vue@3.2.36:
+    resolution: {integrity: sha512-cChBPPmAflgBGmy3tBsjeoe3f3VOSG6naKyY5pjtrqLGbNEXdzCigFUHgBvp9e3ysAtFtEx7OLqcSDh/1Cq2TQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.36
     dev: true
 
   /vue/3.2.36:

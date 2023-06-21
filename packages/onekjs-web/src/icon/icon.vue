@@ -11,7 +11,7 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { computed, CSSProperties } from 'vue';
+import { computed, CSSProperties, onMounted } from 'vue';
 import './style/index.less';
 
 type Props = {

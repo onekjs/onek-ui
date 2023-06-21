@@ -1,4 +1,5 @@
 <template>
+  <o-icon-test></o-icon-test>
   <ul class="icon-list">
     <li v-for="item in icons" :key="item.icon_id" class="icon-item">
       <span class="icon-item-title">{{ item.name }}</span>
