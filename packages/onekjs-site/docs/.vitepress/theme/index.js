@@ -5,7 +5,6 @@ import icons from "@onekjs/icons";
 // import DemoBlock from '@ruabick/vitepress-demo-block';
 // import '@ruabick/vitepress-demo-block/dist/style.css';
 import DemoBlock from '@onekjs/demo-block';
-import '@onekjs/demo-block/es/index.css';
 
 export default {
   ...DefaultTheme,
