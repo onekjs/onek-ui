@@ -1,17 +1,9 @@
 <template>
-  <ul class="icon-list">
-    <li v-for="item in icons" :key="item.icon_id" class="icon-item">
-      <span class="icon-item-title">{{ item.name.replace('o-', '') }}</span>
-      <div class="icon-item-component">
-        <component :is="item.name" size="32" />
-      </div>
-    </li>
-  </ul>
+  <o-icon name="loading" />
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { icon_list } from '@onekjs/icons';
-const icons = ref(icon_list);
+import { loadSprites } from '@onekjs/icons';
+loadSprites();
 </script>
 <style scoped lang="less">
 .icon-list {

@@ -2,13 +2,13 @@
   <div style="display: flex">
     <o-button shape="circle" size="normal" type="primary">
       <template #icon>
-        <o-icon name="upload" />
+        <IconUpload />
       </template>
     </o-button>
     <span />
     <o-button shape="circle" size="normal" type="warning">
       <template #icon>
-        <o-icon-download name="download" />
+        <IconDownload />
       </template>
     </o-button>
     <span />
@@ -21,13 +21,13 @@
     <span />
     <o-button shape="circle" size="normal" type="success">
       <template #icon>
-        <o-icon name="ok" />
+        <IconOk />
       </template>
     </o-button>
     <span />
     <o-button shape="circle" size="normal" type="danger">
       <template #icon>
-        <o-icon name="delete" />
+        <IconDelete />
       </template>
     </o-button>
   </div>
@@ -38,7 +38,7 @@
       size="normal"
       type="primary"
     >
-      <template #icon> <o-icon name="upload" /> </template>
+      <template #icon> <IconLoading /> </template>
       loading</o-button
     >
     <span />
@@ -48,7 +48,7 @@
       size="normal"
       type="danger"
     >
-      <template #icon> <o-icon name="delete" /></template>
+      <template #icon> <IconDelete /></template>
       delete</o-button
     >
     <span />
@@ -59,7 +59,7 @@
       type="primary"
       plain
     >
-      <template #icon> <o-icon name="download" /></template>
+      <template #icon> <IconDownload /></template>
       download</o-button
     >
   </div>
@@ -67,7 +67,14 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 const loading = ref(false);
-import { IconUp } from '@onekjs/icons';
+import {
+  IconUp,
+  IconDownload,
+  IconUpload,
+  IconLoading,
+  IconOk,
+  IconDelete
+} from '@onekjs/icons';
 const handleClick = () => {
   loading.value = !loading.value;
   setTimeout(() => {

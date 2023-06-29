@@ -2,31 +2,32 @@
   <div style="display: flex; margin-top: 15px">
     <o-button shape="circle" type="danger">
       <template #icon>
-        <o-icon size="14" name="close" />
+        <IconClose />
       </template>
     </o-button>
     <span />
     <o-button shape="circle" type="success">
       <template #icon>
-        <o-icon size="14" name="ok" />
+        <IconOk />
       </template>
     </o-button>
     <span />
     <o-button type="primary">
       <template #icon>
-        <o-icon size="14" name="upload" />
+        <IconUpload />
       </template>
     </o-button>
     <span />
     <o-button shape="round" type="warning">
       <template #icon>
-        <o-icon size="14" name="download" />
+        <IconDownload />
       </template>
     </o-button>
   </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { IconOk, IconUpload, IconClose, IconDownload } from '@onekjs/icons';
 const loading = ref(false);
 const handleClick = () => {
   loading.value = !loading.value;
