@@ -1,0 +1,22 @@
+{
+    "o-icon/name": {
+        "description": "icon name",
+        "optionType": "string",
+        "defaultValue": "loading"
+      },
+      "o-icon/size":{
+        "description": "icon size",
+        "optionType": "string|number",
+        "defaultValue": 0
+      },
+      "o-icon/type":{
+        "description": "icon type",
+        "optionType": "string",
+        "defaultValue": "svg"
+      }, 
+      "o-icon/rotate":{
+        "description": "icon rotate",
+        "optionType": "number",
+        "defaultValue": 0
+      }
+}

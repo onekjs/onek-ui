@@ -1,0 +1,45 @@
+{
+  "o-button/disabled": {
+    "description": "disabled state of button",
+    "optionType": "boolean",
+    "defaultValue": "false"
+  },
+  "o-button/plain": {
+    "description": "plain state of button",
+    "optionType": "boolean",
+    "defaultValue": "false"
+  },
+  "o-button/link": {
+    "description": "link state of button",
+    "optionType": "boolean",
+    "defaultValue": "false"
+  },
+  "o-button/icon": {
+    "description": "set the icon of button, see: Icon component",
+    "optionType": "string",
+    "defaultValue": "-"
+  },
+  "o-button/loading": {
+    "description": "set the loading status of button",
+    "optionType": "boolean | { delay: number }",
+    "defaultValue": "false"
+  },
+  "o-button/shape": {
+    "options": ["square", "circle", "round"],
+    "description": "can be set to circle or omitted",
+    "optionType": "string",
+    "defaultValue": "square"
+  },
+  "o-button/size": {
+    "options": ["mini", "small", "normal", "large"],
+    "description": "can be set to small large or omitted",
+    "optionType": "string",
+    "defaultValue": "normal"
+  },
+  "o-button/type": {
+    "options": ["primary", "default", "warning ", "danger", "success"],
+    "description": "can be set to primary or omitted (meaning default)",
+    "optionType": "string",
+    "defaultValue": "default"
+  }
+}

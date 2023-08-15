@@ -1,0 +1,21 @@
+
+{
+  "o-button": {
+    "defaults": ["type"],
+    "link":"button",
+    "attributes": ["disabled", "plain", "link", "icon", "loading", "size", "type","shape"],
+    "description": "to trigger an operation"
+  },
+  "o-button-group": {
+    "defaults": ["type"],
+    "link":"button",
+    "attributes": ["link","size", "type"],
+    "description": "button group"
+  },
+  "o-icon": {
+    "defaults": ["name"],
+    "link":"icon",
+    "attributes": ["tyoe","name", "size","rotate"],
+    "description": "icon show"
+  }
+}

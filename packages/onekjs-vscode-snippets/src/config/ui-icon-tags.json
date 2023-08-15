@@ -1,0 +1,482 @@
+{
+  "o-icon-add": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/add.svg"
+  },
+  "o-icon-B": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/B.svg"
+  },
+  "o-icon-batch-choice": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/batch-choice.svg"
+  },
+  "o-icon-callback": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/callback.svg"
+  },
+  "o-icon-classify": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/classify.svg"
+  },
+  "o-icon-close-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/close-block.svg"
+  },
+  "o-icon-close-eye-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/close-eye-block.svg"
+  },
+  "o-icon-close-eye": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/close-eye.svg"
+  },
+  "o-icon-close-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/close-ring.svg"
+  },
+  "o-icon-close": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/close.svg"
+  },
+  "o-icon-code": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/code.svg"
+  },
+  "o-icon-color-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/color-block.svg"
+  },
+  "o-icon-component": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/component.svg"
+  },
+  "o-icon-contraction": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/contraction.svg"
+  },
+  "o-icon-copy-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/copy-block.svg"
+  },
+  "o-icon-copy": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/copy.svg"
+  },
+  "o-icon-delete-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/delete-block.svg"
+  },
+  "o-icon-delete": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/delete.svg"
+  },
+  "o-icon-down-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/down-block.svg"
+  },
+  "o-icon-down": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/down.svg"
+  },
+  "o-icon-download-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/download-ring.svg"
+  },
+  "o-icon-download": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/download.svg"
+  },
+  "o-icon-drawing-board": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/drawing-board.svg"
+  },
+  "o-icon-edit-block-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/edit-block-ring.svg"
+  },
+  "o-icon-edit": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/edit.svg"
+  },
+  "o-icon-exclamation-point-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/exclamation-point-block.svg"
+  },
+  "o-icon-exclamation-point-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/exclamation-point-ring.svg"
+  },
+  "o-icon-eye-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/eye-block.svg"
+  },
+  "o-icon-eye": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/eye.svg"
+  },
+  "o-icon-fallback": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/fallback.svg"
+  },
+  "o-icon-filtrate": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/filtrate.svg"
+  },
+  "o-icon-folder-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/folder-block.svg"
+  },
+  "o-icon-folder": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/folder.svg"
+  },
+  "o-icon-full-seen": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/full-seen.svg"
+  },
+  "o-icon-gear-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/gear-block.svg"
+  },
+  "o-icon-gear": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/gear.svg"
+  },
+  "o-icon-gohome": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/gohome.svg"
+  },
+  "o-icon-I": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/I.svg"
+  },
+  "o-icon-image": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/image.svg"
+  },
+  "o-icon-info-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/info-block.svg"
+  },
+  "o-icon-info-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/info-ring.svg"
+  },
+  "o-icon-left-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/left-block.svg"
+  },
+  "o-icon-left-double": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/left-double.svg"
+  },
+  "o-icon-left": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/left.svg"
+  },
+  "o-icon-letter-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/letter-block.svg"
+  },
+  "o-icon-loading": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/loading.svg"
+  },
+  "o-icon-message-black": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/message-black.svg"
+  },
+  "o-icon-message-block-point": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/message-block-point.svg"
+  },
+  "o-icon-message-point": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/message-point.svg"
+  },
+  "o-icon-message": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/message.svg"
+  },
+  "o-icon-minus": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/minus.svg"
+  },
+  "o-icon-mobile": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/mobile.svg"
+  },
+  "o-icon-notice-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/notice-block.svg"
+  },
+  "o-icon-notice": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/notice.svg"
+  },
+  "o-icon-ok-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/ok-block.svg"
+  },
+  "o-icon-ok-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/ok-ring.svg"
+  },
+  "o-icon-ok": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/ok.svg"
+  },
+  "o-icon-page-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/page-block.svg"
+  },
+  "o-icon-page": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/page.svg"
+  },
+  "o-icon-pc": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/pc.svg"
+  },
+  "o-icon-plus": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/plus.svg"
+  },
+  "o-icon-point": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/point.svg"
+  },
+  "o-icon-position-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/position-block.svg"
+  },
+  "o-icon-position": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/position.svg"
+  },
+  "o-icon-put-away": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/put-away.svg"
+  },
+  "o-icon-question-mark-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/question-mark-ring.svg"
+  },
+  "o-icon-right-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/right-block.svg"
+  },
+  "o-icon-right-double": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/right-double.svg"
+  },
+  "o-icon-right": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/right.svg"
+  },
+  "o-icon-search": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/search.svg"
+  },
+  "o-icon-seave-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/seave-ring.svg"
+  },
+  "o-icon-set-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/set-block.svg"
+  },
+  "o-icon-set": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/set.svg"
+  },
+  "o-icon-share-other": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/share-other.svg"
+  },
+  "o-icon-share": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/share.svg"
+  },
+  "o-icon-sort-down": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/sort-down.svg"
+  },
+  "o-icon-sort-up": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/sort-up.svg"
+  },
+  "o-icon-sort": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/sort.svg"
+  },
+  "o-icon-stretch": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/stretch.svg"
+  },
+  "o-icon-switch-down-r": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-down-r.svg"
+  },
+  "o-icon-switch-down": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-down.svg"
+  },
+  "o-icon-switch-left-double": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-left-double.svg"
+  },
+  "o-icon-switch-left": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-left.svg"
+  },
+  "o-icon-switch-right-double": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-right-double.svg"
+  },
+  "o-icon-switch-right": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-right.svg"
+  },
+  "o-icon-switch-up-r": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-up-r.svg"
+  },
+  "o-icon-switch-up": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch-up.svg"
+  },
+  "o-icon-switch": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/switch.svg"
+  },
+  "o-icon-txt": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/txt.svg"
+  },
+  "o-icon-U": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/U.svg"
+  },
+  "o-icon-up-block": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/up-block.svg"
+  },
+  "o-icon-up": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/up.svg"
+  },
+  "o-icon-upload-cloud": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/upload-cloud.svg"
+  },
+  "o-icon-upload-ring": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/upload-ring.svg"
+  },
+  "o-icon-upload": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/upload.svg"
+  },
+  "o-icon-user": {
+    "link": "icon",
+    "attributes": ["type", "size", "name", "rotate"],
+    "description": "https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/user.svg"
+  }
+}
