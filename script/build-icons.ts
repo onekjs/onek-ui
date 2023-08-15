@@ -63,13 +63,15 @@ export const loadSprites = () => {
   const loadName = `${iconsPath}/src/loadSprites.js`;
   fs.writeFileSync(loadName, loadStr);
 }
-
+type stringKey = Record<string, any>;
 function generateComponents(data: Icon[]) {
   if (!fs.existsSync(iconsComponentPath)) {
     fs.mkdirSync(iconsComponentPath);
   }
   let exports = ``;
   const icons_list = [];
+  const icons_obj: stringKey = {};
+  const icon_tag_obj:stringKey ={}
   for (let i = 0; i < data.length; i++) {
     const svgFile = fs.readFileSync(data[i].path, 'utf8');
     const pathRegex = /<path[^>]*>/;
@@ -146,6 +148,30 @@ export default ${exportName};
     icons_list.push({
       name: `o-${data[i].name}`
     });
+    // 大写第一个字母
+    const upName = data[i].name
+      .split('-')
+      .map((item, index) => {
+        let value= item
+        if (index != 0) {
+          value=item[0].toUpperCase()+item.slice(1);
+        }
+        return value;
+      }).join("")
+    icons_obj[upName] = {
+      category: 'Components',
+      subtitle: '图标',
+      type: 'default',
+      title: 'Icon',
+      tag: `o-${data[i].name}`
+    };
+    // icon 组件标签
+    icon_tag_obj[`o-${data[i].name}`]= {
+      "link":"icon",
+      "attributes": ["type","size", "name","rotate"],
+      "description": `https://raw.githubusercontent.com/onekjs/onek-ui/c802217ddb48a6c3fd4afb3fe80fa4f2a8b27943/packages/onekjs-icons/src/svg/${data[i].name.slice(5)}.svg`
+    }
+
   }
 
   // all
@@ -212,7 +238,11 @@ export default Icon;
   fs.writeFileSync(`${iconsComponentPath}/icon.js`, iconIndex);
 
   const iconJSON = `${iconsPath}/icon-list-json.json`;
+  const iconDescription = `${iconsPath}/icon-description.js`
+  const iconTagDescription = `${iconsPath}/icon-description.json`
   fs.writeFileSync(iconJSON, JSON.stringify(icons_list));
+  fs.writeFileSync(iconDescription, "export default"+JSON.stringify(icons_obj));
+  fs.writeFileSync(iconTagDescription, JSON.stringify(icon_tag_obj));
 
   const iconsName = `${iconsPath}/src/index.js`;
   fs.writeFileSync(iconsName, exports);
