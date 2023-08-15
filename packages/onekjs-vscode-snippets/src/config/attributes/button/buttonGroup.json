@@ -1,0 +1,24 @@
+{
+  "o-button-group/type": {
+    "options": ["default", "primary", "success"],
+    "description": "button group type",
+    "optionType": "string",
+    "default": "default"
+  },
+  "o-button-group/size": {
+    "options": ["samll", "normal", "large"],
+    "description": "button group size",
+    "optionType": "string",
+    "default": "default"
+  },
+  "o-button-group/link": {
+    "description": "link state of button group",
+    "optionType": "boolean",
+    "defaultValue": "false"
+  },
+  "o-button-group/vertical ": {
+    "description": "vertical state of button group",
+    "optionType": "boolean",
+    "defaultValue": "false"
+  }
+}
