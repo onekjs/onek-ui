@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import Button from '../button.vue';
+import ButtonGroup from '../buttonGroup.vue';
 import { describe, expect, test } from 'vitest';
 
 describe('Button.vue', () => {
@@ -82,6 +83,89 @@ describe('Button.vue', () => {
 
     expect(wrapper.find('button').element.disabled).toBe(true);
   });
+});
+// 检查按钮组是否正确
+describe('ButtonGroup', () => {
+  const App = {
+    components: {
+      Button
+    },
+    template: `
+    <Button id="default">default</Button><Button>default</Button> <Button>default</Button>
+    `
+  };
+  // 检查默认状态是否正确
+  test('deafult', async () => {
+    const wrapper = mount(ButtonGroup, {
+      slots: {
+        default: App
+      },
+      props: {
+        size: 'small'
+      }
+    });
+    expect(wrapper.classes()).toEqual(
+      expect.arrayContaining(['o-button-group', 'o-button-group-horizontal'])
+    );
 
-  // 检查按钮组成功
+    expect(wrapper.find('#default').classes()).toEqual(
+      expect.arrayContaining([
+        'o-button',
+        'o-button-default',
+        'o-button-small',
+        'o-button-small-square'
+      ])
+    );
+  });
+  // 检查vertical状态是否正确
+  test('vertical', async () => {
+    const wrapper = mount(ButtonGroup, {
+      slots: {
+        default: App
+      },
+      props: {
+        size: 'small',
+        vertical: true
+      }
+    });
+    expect(wrapper.classes()).toEqual(
+      expect.arrayContaining(['o-button-group', 'o-button-group-vertical'])
+    );
+
+    expect(wrapper.find('#default').classes()).toEqual(
+      expect.arrayContaining([
+        'o-button',
+        'o-button-default',
+        'o-button-small',
+        'o-button-small-square'
+      ])
+    );
+  });
+
+  // 检查link状态是否正确
+  test('vertical and link', async () => {
+    const wrapper = mount(ButtonGroup, {
+      slots: {
+        default: App
+      },
+      props: {
+        size: 'small',
+        vertical: true,
+        link: true
+      }
+    });
+    expect(wrapper.classes()).toEqual(
+      expect.arrayContaining(['o-button-group', 'o-button-group-vertical'])
+    );
+
+    expect(wrapper.find('#default').classes()).toEqual(
+      expect.arrayContaining([
+        'o-button',
+        'o-button-default',
+        'o-button-small',
+        'o-button-small-square',
+        'o-button-default--link'
+      ])
+    );
+  });
 });
