@@ -1,9 +1,9 @@
 <template>
   <button
     @click="handleClick"
-    :disabled="props.disabled || isloading"
+    :disabled="prop.disabled || isloading"
     class="o-button"
-    :class="buttonClasses"
+    :class="classList"
   >
     <span v-if="isloading" class="o-button-loading">
       <svg
@@ -32,52 +32,20 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { computed, inject } from 'vue';
-import icon from '../icon/icon.vue';
+import { computed} from 'vue';
 import './style/index.less';
+import { Props } from './src/props';
+import { useButton } from '../../_hooks/use-button/index';
 
-const buttonGroupInjectionKey = 'OnekUIButtonGroup';
+
+const prop = defineProps(Props);
+const { classList } = useButton(prop);
 
 const emits = defineEmits(['click']);
 
-type Props = {
-  type?: string;
-  size?: string;
-  plain?: boolean;
-  link?: boolean;
-  disabled?: boolean;
-  loading?: boolean;
-  shape?: string;
-};
-
-const prefix = 'o-button';
-
-const props = withDefaults(defineProps<Props>(), {
-  type: 'default',
-  size: 'normal',
-  plain: false,
-  disabled: false,
-  link: false,
-  loading: false,
-  shape: 'square'
-});
-
-const groupProps = inject(buttonGroupInjectionKey, undefined);
 
 const isloading = computed(() => {
-  return props.loading;
-});
-
-const buttonClasses = computed(() => {
-  return {
-    [`${prefix}-${groupProps?.type ?? props.type}`]: true,
-    [`${prefix}-${groupProps?.size ?? props.size}`]: true,
-    [`${prefix}-${groupProps?.type ?? props.type}--link`]:
-      groupProps?.link || props.link,
-    [`${prefix}-${groupProps?.size ?? props.size}-${props.shape}`]: true,
-    [`${prefix}-${props.type}--plain`]: props.plain,
-    [`${prefix}-${props.type}--disabled`]: props.disabled || props.loading
-  };
+  return prop.loading;
 });
 
 const handleClick = (event: MouseEvent) => {

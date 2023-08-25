@@ -419,7 +419,6 @@ export class OnekjsCompletionItemProvider implements CompletionItemProvider {
   }
 
   firstCharsEqual(str1: string, str2: string) {
-    console.log(str1.toLowerCase().indexOf(str2.toLowerCase()));
 
     if (str1) {
       return str1.toLowerCase().indexOf(str2.toLowerCase()) !== -1;

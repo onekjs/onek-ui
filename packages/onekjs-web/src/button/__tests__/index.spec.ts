@@ -125,7 +125,7 @@ describe('ButtonGroup', () => {
       },
       props: {
         size: 'small',
-        vertical: true
+        direction: "vertical"
       }
     });
     expect(wrapper.classes()).toEqual(
@@ -150,7 +150,7 @@ describe('ButtonGroup', () => {
       },
       props: {
         size: 'small',
-        vertical: true,
+        direction: "vertical",
         link: true
       }
     });
