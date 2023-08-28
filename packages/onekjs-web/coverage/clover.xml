@@ -2,7 +2,7 @@
 <coverage generated="1686633390611" clover="3.2.0">
   <project timestamp="1686633390611" name="All files">
     <metrics statements="54" coveredstatements="54" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="57" coveredelements="57" complexity="0" loc="54" ncloc="54" packages="1" files="1" classes="1"/>
-    <file name="button.vue" path="E:\github\onek-ui\packages\components\src\button\button.vue">
+    <file name="button.vue" path="E:\github\onek-ui\packages\components\src\button\src\button.vue">
       <metrics statements="54" coveredstatements="54" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>

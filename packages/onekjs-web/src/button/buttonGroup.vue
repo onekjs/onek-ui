@@ -1,49 +1,14 @@
 <template>
-  <div class="o-button-group" :class="buttonGroupClasses">
+  <div class="o-button-group" :class="classList">
     <slot />
   </div>
 </template>
-<script lang="ts">
-import { computed, provide, reactive, toRefs } from 'vue';
-import './style/index.less';
-export default {
-  name: 'o-button-group'
-};
-</script>
 <script setup lang="ts">
-const buttonGroupInjectionKey = 'OnekUIButtonGroup';
+import './style/index.less';
+import { ButtonGroupProp } from './src/props';
+import { useButtonGroup } from '../../_hooks/use-button-group/index';
+defineOptions({"name":"o-button-group"})
+const props = defineProps(ButtonGroupProp);
+const { classList } = useButtonGroup(props);
 
-type Props = {
-  type?: string;
-  size?: string;
-  link?: boolean;
-  vertical?: boolean;
-};
-
-const prefix = 'o-button-group';
-
-const props = withDefaults(defineProps<Props>(), {
-  type: 'default',
-  size: 'normal',
-  vertical: false,
-  link: false
-});
-
-const { type, size, link } = toRefs(props);
-
-provide(
-  buttonGroupInjectionKey,
-  reactive({
-    type,
-    size,
-    link
-  })
-);
-
-const buttonGroupClasses = computed(() => {
-  return {
-    [`${prefix}-vertical`]: props.vertical,
-    [`${prefix}-horizontal`]: !props.vertical
-  };
-});
 </script>

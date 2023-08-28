@@ -20,19 +20,19 @@
     <div style="height: 15px"></div>
     <span>vertical</span>
     <div style="height: 15px"></div>
-    <o-button-group size="small" vertical>
+    <o-button-group size="small" direction="vertical">
       <o-button>default</o-button>
       <o-button>default</o-button>
       <o-button>default</o-button>
     </o-button-group>
     <div style="display: inline-block; width: 15px"></div>
-    <o-button-group @click="handleClick" vertical type="primary">
+    <o-button-group @click="handleClick" direction="vertical" type="primary">
       <o-button>primary</o-button>
       <o-button>primary</o-button>
       <o-button>primary</o-button>
     </o-button-group>
     <div style="display: inline-block; width: 15px"></div>
-    <o-button-group vertical size="large" type="success">
+    <o-button-group direction="vertical" size="large" type="success">
       <o-button>success</o-button>
       <o-button>success</o-button>
       <o-button>success</o-button>
@@ -40,19 +40,19 @@
     <div style="height: 15px"></div>
     <span>link</span>
     <div style="height: 15px"></div>
-    <o-button-group link size="small" vertical>
+    <o-button-group link size="small" direction="vertical">
       <o-button>default</o-button>
       <o-button>default</o-button>
       <o-button>default</o-button>
     </o-button-group>
     <div style="display: inline-block; width: 15px"></div>
-    <o-button-group link @click="handleClick" vertical type="primary">
+    <o-button-group link @click="handleClick" direction="vertical" type="primary">
       <o-button>primary</o-button>
       <o-button>primary</o-button>
       <o-button>primary</o-button>
     </o-button-group>
     <div style="display: inline-block; width: 15px"></div>
-    <o-button-group link vertical size="large" type="success">
+    <o-button-group link direction="vertical" size="large" type="success">
       <o-button>success</o-button>
       <o-button>success</o-button>
       <o-button>success</o-button>

@@ -10,7 +10,7 @@ app.use(icons);
 
 or
 
-import { IconAdd } from '@onekjs/ui';
+import { IconAdd } from '@onekjs/icons';
 // template
 <o-icon-add />
 ```
@@ -21,11 +21,10 @@ desc="这是图标演示"
 importMap="{'vue-typical': 'https://github.com/onekjs/onek-ui/tree/main/packages/components/src/icon/__demo__/icon.vue'}">
 </demo>
 
-
 雪碧图加载
 
 ```
-import { loadSprites } from '@onekjs/ui';
+import { loadSprites } from '@onekjs/icons';
 
 // 加载雪碧图
 loadSprites();

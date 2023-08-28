@@ -32,6 +32,9 @@ export default {
         },
       ],
     },
+    outline:{
+      level:"deep"
+    }
   },
   markdown: {
     config(md) {
