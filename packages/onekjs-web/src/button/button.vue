@@ -25,18 +25,13 @@
     <slot></slot>
   </button>
 </template>
-<script lang="ts">
-export default {
-  name: 'o-button'
-};
-</script>
 
 <script lang="ts" setup>
 import { computed} from 'vue';
 import './style/index.less';
 import { Props } from './src/props';
 import { useButton } from '../../_hooks/use-button/index';
-
+defineOptions({"name":"o-button"})
 
 const prop = defineProps(Props);
 const { classList } = useButton(prop);

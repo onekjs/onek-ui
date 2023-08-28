@@ -22,10 +22,10 @@
   "license": "MIT",
   "devDependencies": {
     "@onekjs/demo-block": "workspace:*",
+    "@onekjs/icons": "workspace:*",
     "@onekjs/ui": "workspace:*",
     "@onekjs/utils": "workspace:*",
     "@onekjs/web": "workspace:*",
-    "@onekjs/icons": "workspace:*",
     "@ruabick/md-demo-plugins": "^0.3.3",
     "@ruabick/vitepress-demo-block": "^0.3.3",
     "@types/gulp": "^4.0.11",
@@ -57,7 +57,7 @@
     "vite-plugin-dts": "1.4.1",
     "vitepress": "1.0.0-beta.2",
     "vitest": "^0.32.0",
-    "vue": "^3.2.36",
+    "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   }
 }
